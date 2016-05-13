@@ -12,6 +12,11 @@ a {
     text-decoration: none;
 }
 
+a:hover,
+a.active {
+    color: #004a88 !important;
+}
+
 .header {
     position: relative;
     height: 122px;
@@ -81,11 +86,6 @@ a {
     font-weight: 800;
 }
 
-.header .navigation a:hover,
-.header .navigation a.active {
-    color: #004a88;
-}
-
 .header .navigation .home-button {
     height: 18px;
     width: 18px;
@@ -106,17 +106,19 @@ a {
 }
 
 .content {
-    height: 500px;
     width: 100%;
+    padding: 0 10%;
     overflow: hidden;
+    box-sizing: border-box;
     background: url("../images/home-content-bg.jpg") 0 0 repeat-x;
+    padding-bottom: 100px;
 }
 
 .content .anniversary-box {
     max-width: 940px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    padding: 15px;
+    padding: 15px 50px 20px 50px;
     background: #999 url("../images/gray-box-bg.png") top left no-repeat;
     background-size: cover;
     box-shadow: 0 0 14px 2px rgba(25,23,26,.61);
@@ -147,4 +149,57 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: "Times New Roman", Arial, sans-serif;
+}
+
+.info-box {
+    float: left;
+    padding: 20px;
+    margin-top: 38px;
+    background: #FFF;
+    border: 1px solid #c8c8c8;
+    box-shadow: 0 0 9px rgba(25,23,26,.13);
+    animation: infoBox .2s cubic-bezier(0,0,0.24,1.01);
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.info-box.services {
+    width: 60%;
+}
+
+.info-box.clients {
+    width: calc(40% - 40px);
+    margin-left: 40px;
+}
+
+@keyframes infoBox {
+    from {transform: translateY(-12px)}
+    to {transform: translateY(0)}
+}
+
+.info-box-header {
+    font-weight: bold;
+    font-size: 30px;
+    color: #004a88;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #c8c8c8;
+    margin-bottom: 15px;
+}
+
+.info-box a {
+    display: block;
+    float: left;
+    min-width: 215px;
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 10px;
+    padding: 15px 0;
+    color: #666;
+    background: #f8f8f8;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
 }

@@ -28,6 +28,14 @@
                 <div class="anniversary-header"><%=anniversaryHeader%></div>
                 <div class="anniversary-text"><%=anniversaryText%></div>
             </div>
+            <div class="info-box services">
+                <div class="info-box-header"><%=infoBoxServicesHeader%></div>
+                <% _.each(services, function (service) { %> <a href="<%= service.url %>"><%= service.text %></a> <% }); %>
+            </div>
+            <div class="info-box clients" id="machines">
+                <div class="info-box-header"><%=infoBoxClientsHeader%></div>
+                <div class="info-box-text"><%=infoBoxClientsText%></div>
+            </div>
         </div>
     </body>
 </html>
