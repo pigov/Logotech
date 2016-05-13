@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo">
+                <div class="main-name"><%= logotechName %></div>
+                <div class="bullets">
+                    <span><%=bulletQuality%></span>
+                    <span><%=bulletIngenuity%></span>
+                    <span><%=bulletTeamwork%></span>
+                </div>
+            </div>
+            <div class="navigation">
+                <a class="button home-button <%=currentPage === '/' ? 'active' : ''%>" href="<%=urls.home%>"></a>
+                <a class="button <%=currentPage === '/profile' ? 'active' : ''%>" href="<%=urls.profile%>"><%=navigationProfile%></a>
+                <a class="button <%=currentPage === '/services' ? 'active' : ''%>" href="<%=urls.services%>"><%=navigationServices%></a>
+                <a class="button <%=currentPage === '/clients' ? 'active' : ''%>" href="<%=urls.clients%>"><%=navigationClients%></a>
+                <a class="button <%=currentPage === '/contact' ? 'active' : ''%>" href="<%=urls.contact%>"><%=navigationContact%></a>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="images"></div>
+        </div>
+        <div class="content">
+            <div class="anniversary-box">
+                <div class="anniversary-header"><%=anniversaryHeader%></div>
+                <div class="anniversary-text"><%=anniversaryText%></div>
+            </div>
+        </div>
+    </body>
+</html>

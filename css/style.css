@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+    background: url("../images/rectangle.png") center 29px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    position: relative;
+    height: 122px;
+    width: 100%;
+    background: #FFF url("../images/header-bg.jpg") repeat-x;
+}
+
+.header .logo {
+    position: absolute;
+    top: 31px;
+    left: 50px;
+    height: 60px;
+}
+
+.header .logo .main-name {
+    color: #000;
+    font-size: 28px;
+    font-weight: 800;
+    font-family: "Times New Roman", Arial, sans-serif;
+}
+
+.header .logo .bullets {
+    margin-top: 5px;
+    color: #004a88;
+    text-transform: uppercase;
+}
+
+@media (max-width: 939px) {
+    .header .navigation {
+        position: absolute;
+        top: 38px;
+        right: 0;
+        color: #666;
+        text-transform: uppercase;
+        font-family: "Times New Roman", Arial, sans-serif;
+    }
+
+    .header .navigation a,
+    .header .navigation .home-button {
+        display: block;
+        width: 84px !important;
+    }
+}
+
+@media (min-width: 940px) {
+    .header .navigation {
+        position: absolute;
+        top: 38px;
+        right: 50px;
+        color: #666;
+        text-transform: uppercase;
+        font-family: "Times New Roman", Arial, sans-serif;
+    }
+
+    .header .navigation a {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+    }
+}
+
+.header .navigation a {
+    padding: 16px 18px;
+    background: #FFF;
+    border: 1px solid #c8c8c8;
+    box-shadow: 1px 0 0 rgba(255, 255, 255, 0.2) inset, 0 0 9px rgba(25,23,26,.13);
+    font-weight: 800;
+}
+
+.header .navigation a:hover,
+.header .navigation a.active {
+    color: #004a88;
+}
+
+.header .navigation .home-button {
+    height: 18px;
+    width: 18px;
+    background: #FFF url("../images/home-icon.png") 18px 18px no-repeat;
+
+}
+
+.header .navigation .home-button:hover,
+.header .navigation .home-button.active {
+    background-position: 18px -16px;
+}
+
+.gallery {
+    height: 425px;
+    width: 100%;
+    background: #FFF url("../images/factory.jpg") 0 0;
+    background-size: cover;
+}
+
+.content {
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    background: url("../images/home-content-bg.jpg") 0 0 repeat-x;
+}
+
+.content .anniversary-box {
+    max-width: 940px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    background: #999 url("../images/gray-box-bg.png") top left no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 14px 2px rgba(25,23,26,.61);
+    box-sizing: border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    animation: anniversaryBox .5s;
+}
+
+@keyframes anniversaryBox {
+    from {transform: translateY(-100%)}
+    to {transform: translateY(0)}
+}
+
+.content .anniversary-box .anniversary-header {
+    color: #404040;
+    font-size: 30px;
+    font-weight: 600;
+    text-shadow: 0 1px 1px rgba(255,255,255,.2);
+    text-align: center;
+}
+
+.content .anniversary-box .anniversary-text {
+    margin-top: 20px;
+    color: #FFF;
+    line-height: 30px;
+    font-size: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: "Times New Roman", Arial, sans-serif;
+}
